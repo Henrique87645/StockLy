@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppStockly.pgPrincipal"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="White">
+
+    <StackLayout>
+        <VerticalStackLayout>
+            <Border BackgroundColor="White"
+                        StrokeThickness="0"
+                        Padding="20,15,10,0"
+                        Margin="0,10,0,20">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="12"/>
+                </Border.StrokeShape>
+
+                <Grid ColumnDefinitions="*, Auto" >
+                    <VerticalStackLayout Grid.Column="0"
+                                             VerticalOptions="Center"
+                                             Spacing="5"
+                                             Padding="0,0,0,15">
+
+                        <Label Text="Olá, Admin!👋 "
+                                   FontSize="25"
+                                   FontAttributes="Bold"
+                                   TextColor="DarkBlue"/>
+
+                        <Label Text="Bem-vindo ao StockLy"
+                                   FontSize="15"
+                                   TextColor="Orange"/>
+                    </VerticalStackLayout>
+
+                    <Image Grid.Column="1"
+                               Source="estante.png"
+                               HeightRequest="100"
+                               VerticalOptions="End"
+                               HorizontalOptions="End"/>
+                </Grid>
+            </Border>
+
+            <Label Text="Resumo rápido"
+                   FontSize="18"
+                   TextColor="DarkBlue"
+                   Margin="20,10,0,10"/>
+            <HorizontalStackLayout Spacing="12" Margin="15,0,0,0">
+
+                <!--card 1-->
+                <Border BackgroundColor="AliceBlue" 
+                    WidthRequest="105" 
+                    HeightRequest="130">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="16" />
+                    </Border.StrokeShape>
+                    <VerticalStackLayout VerticalOptions="Center" 
+                                         HorizontalOptions="Center">
+
+                        <Image Source="produtos.png" 
+                               HeightRequest="36" 
+                               WidthRequest="36" 
+                               HorizontalOptions="Center" 
+                               Margin="0, 0, 0, 12" />
+
+                        <Label Text="45" FontSize="26" 
+                               FontAttributes="Bold" 
+                               TextColor="DarkBlue" 
+                               HorizontalOptions="Center" 
+                               Margin="0, 0, 0, 4" />
+                        <Label Text="Produtos" 
+                               FontSize="13" 
+                               TextColor="#475569" 
+                               HorizontalOptions="Center" />
+
+                    </VerticalStackLayout>
+                </Border>
+
+                <!--card 2-->
+                <Border BackgroundColor="LightGreen"  
+                    WidthRequest="105" 
+                    HeightRequest="130">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="16" />
+                    </Border.StrokeShape>
+                    <VerticalStackLayout VerticalOptions="Center" 
+                                         HorizontalOptions="Center">
+
+                        <Image Source="entradas.png" 
+                               HeightRequest="36" 
+                               WidthRequest="36" 
+                               HorizontalOptions="Center" 
+                               Margin="0, 0, 0, 12" />
+
+                        <Label Text="45" FontSize="26" 
+                               FontAttributes="Bold" 
+                               TextColor="DarkBlue" 
+                               HorizontalOptions="Center" 
+                               Margin="0, 0, 0, 4" />
+                        <Label Text="Entradas" 
+                               FontSize="13" 
+                               TextColor="#475569" 
+                               HorizontalOptions="Center" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!--card 3-->
+                <Border BackgroundColor="LightYellow"  
+                    WidthRequest="105" 
+                    HeightRequest="130">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="16" />
+                    </Border.StrokeShape>
+                    <VerticalStackLayout VerticalOptions="Center" 
+                                         HorizontalOptions="Center">
+
+                        <Image Source="saidas.png" 
+                               HeightRequest="36" 
+                               WidthRequest="36" 
+                               HorizontalOptions="Center" 
+                               Margin="0, 0, 0, 12" />
+
+                        <Label Text="45" FontSize="26" 
+                               FontAttributes="Bold" 
+                               TextColor="DarkBlue" 
+                               HorizontalOptions="Center" 
+                               Margin="0, 0, 0, 4" />
+                        <Label Text="Saídas" 
+                               FontSize="13" 
+                               TextColor="#475569" 
+                               HorizontalOptions="Center" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!--card 4-->
+                <Border BackgroundColor="#FF7F7F"  
+                    WidthRequest="105" 
+                    HeightRequest="130">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="16" />
+                    </Border.StrokeShape>
+                    <VerticalStackLayout VerticalOptions="Center" 
+                                         HorizontalOptions="Center">
+
+                        <Image Source="baixoestoque.png" 
+                               HeightRequest="36" 
+                               WidthRequest="36" 
+                               HorizontalOptions="Center" 
+                               Margin="0, 0, 0, 12" />
+
+                        <Label Text="45" FontSize="26" 
+                               FontAttributes="Bold" 
+                               TextColor="DarkBlue" 
+                               HorizontalOptions="Center" 
+                               Margin="0, 0, 0, 4" />
+                        <Label Text="Saídas" 
+                               FontSize="13" 
+                               TextColor="#475569" 
+                               HorizontalOptions="Center" />
+                    </VerticalStackLayout>
+                </Border>
+
+            </HorizontalStackLayout>
+
+            <Label Text="Produtos em destaque"
+                   FontSize="18"
+                   TextColor="DarkBlue"
+                   Margin="20,10,0,0"/>
+
+            <VerticalStackLayout Spacing="15" Padding="20" Margin="0,20,0,0">
+
+                <!--teclado-->
+                <Border Stroke="#F1F5F9" 
+                        StrokeThickness="1" 
+                        BackgroundColor="White" 
+                        Padding="15">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="16" />
+                    </Border.StrokeShape>
+
+                    <Grid x:Name="gridProduto1"
+                          ColumnDefinitions="Auto, *, Auto" 
+                          RowDefinitions="Auto, Auto" 
+                          ColumnSpacing="15" 
+                          RowSpacing="8">
+                        
+                        <Border Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" 
+                                BackgroundColor="#F8FAFC" 
+                                StrokeThickness="0" 
+                                WidthRequest="80" 
+                                HeightRequest="80">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="12" />
+                            </Border.StrokeShape>
+
+                            <Image x:Name="imgTeclado"
+                                   Source="teclado.png" 
+                                   Aspect="AspectFit" 
+                                   Margin="8" />
+                        </Border>
+
+                        <Label Grid.Column="1" Grid.Row="0" 
+                               Text="Teclado Mecânico RGB" 
+                               FontAttributes="Bold" 
+                               FontSize="16" 
+                               TextColor="#0E2356" 
+                               VerticalOptions="End" />
+
+                        <Label Grid.Column="1" Grid.Row="1" 
+                               Text="Periféricos" 
+                               FontSize="14" 
+                               TextColor="#64748B" 
+                               VerticalOptions="Start" />
+
+                        <Label Grid.Column="2" Grid.Row="0" 
+                               Text="10 un" 
+                               FontAttributes="Bold" 
+                               FontSize="16" 
+                               TextColor="#0E2356" 
+                               HorizontalOptions="End" 
+                               VerticalOptions="End" />
+
+
+                        <Border Grid.Column="2" Grid.Row="1" 
+                                BackgroundColor="#EEF6EE" 
+                                StrokeThickness="0" 
+                                Padding="12,4" 
+                                HorizontalOptions="End" 
+                                VerticalOptions="Start">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="8" />
+                            </Border.StrokeShape>
+                            <Label Text="Adequado" 
+                                   FontSize="12" 
+                                   TextColor="#428160" />
+                        </Border>
+
+                    </Grid>
+                </Border>
+
+                <!--mouse-->
+                <Border Stroke="#F1F5F9" 
+                        StrokeThickness="1" 
+                        BackgroundColor="White" 
+                        Padding="15">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="16" />
+                    </Border.StrokeShape>
+
+                    <Grid x:Name="gridProduto2"
+                          ColumnDefinitions="Auto, *, Auto" 
+                          RowDefinitions="Auto, Auto" 
+                          ColumnSpacing="15" RowSpacing="8">
+
+
+                        <Border Grid.Column="0" Grid.Row="0" 
+                                Grid.RowSpan="2" 
+                                BackgroundColor="#F8FAFC" 
+                                StrokeThickness="0" WidthRequest="80" 
+                                HeightRequest="80">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="12" />
+                            </Border.StrokeShape>
+
+                            <Image Source="mouse.png" Aspect="AspectFit" Margin="8" />
+                        </Border>
+
+                        <Label Grid.Column="1" Grid.Row="0" 
+                               Text="Mouse Gamer G203" 
+                               FontAttributes="Bold" 
+                               FontSize="16" 
+                               TextColor="#0E2356" 
+                               VerticalOptions="End" />
+
+                        <Label Grid.Column="1" 
+                               Grid.Row="1" 
+                               Text="Periféricos" 
+                               FontSize="14" 
+                               TextColor="#64748B" 
+                               VerticalOptions="Start" />
+
+                        <Label Grid.Column="2" 
+                               Grid.Row="0" Text="5 un" 
+                               FontAttributes="Bold" FontSize="16" 
+                               TextColor="#0E2356" 
+                               HorizontalOptions="End" 
+                               VerticalOptions="End" />
+
+                        <Border Grid.Column="2" 
+                                Grid.Row="1" 
+                                BackgroundColor="#FFF2F2" 
+                                StrokeThickness="0" Padding="12,4" 
+                                HorizontalOptions="End" 
+                                VerticalOptions="Start">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="8" />
+                            </Border.StrokeShape>
+
+                            <Label Text="Baixo" 
+                                   FontSize="12" 
+                                   TextColor="#D32F2F" 
+                                   HorizontalOptions="Center" />
+                        </Border>
+
+                    </Grid>
+                </Border>
+
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </StackLayout>
+</ContentPage>
