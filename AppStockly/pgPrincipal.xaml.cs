@@ -39,5 +39,18 @@ public partial class pgPrincipal : ContentPage
     {
         await gridProduto2.ScaleTo(1.0, 200);
     }
+    private async void btnCadastrar_Pressed(object sender, EventArgs e)
+    {
+        await ((Button)sender).ScaleTo(1.08, 100);
+    }
+
+    private async void btnCadastrar_Released(object sender, EventArgs e)
+    {
+        await ((Button)sender).ScaleTo(1.0, 100);
+    }
+    private async void btnCadastrar_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new pgCadProduto());
+    }
 
 }

@@ -305,5 +305,31 @@
 
             </VerticalStackLayout>
         </VerticalStackLayout>
+
+        <!--btncadastrar-->
+
+        <Border BackgroundColor="DarkBlue"
+     StrokeThickness="0"
+     Padding="0"
+     HorizontalOptions="End"
+     VerticalOptions="End"
+     Margin="0,0,25,25">
+
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="30"/>
+            </Border.StrokeShape>
+
+            <Button Text="+  CADASTRAR"
+         FontAttributes="Bold"
+         FontSize="15"
+         TextColor="White"
+         BackgroundColor="Transparent"
+         Padding="22,15"
+         Pressed="btnCadastrar_Pressed"
+         Released="btnCadastrar_Released"
+         Clicked="btnCadastrar_Clicked"/>
+
+        </Border>
+
     </StackLayout>
 </ContentPage>

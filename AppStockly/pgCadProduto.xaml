@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppStockly.pgCadProduto"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="White">
+    <ScrollView>
+
+        <VerticalStackLayout Padding="25,30"
+                             Spacing="8">
+
+            <Grid ColumnDefinitions="Auto,*"
+                  ColumnSpacing="10"
+                  Margin="0,0,0,15">
+
+                <Button Text="‹"
+                        FontSize="35"
+                        TextColor="DarkBlue"
+                        BackgroundColor="Transparent"
+                        Padding="0"
+                        WidthRequest="45"
+                        HeightRequest="45"
+                        Clicked="btnVoltar_Clicked"/>
+
+                <VerticalStackLayout Grid.Column="1"
+                                     VerticalOptions="Center">
+
+                    <Label Text="Cadastrar produto"
+                           FontSize="25"
+                           FontAttributes="Bold"
+                           TextColor="DarkBlue"/>
+
+                    <Label Text="Adicione um novo item ao estoque"
+                           FontSize="14"
+                           TextColor="#64748B"/>
+
+                </VerticalStackLayout>
+
+            </Grid>
+
+
+            <!--nome-->
+
+            <Label Text="Nome do produto"
+                   FontAttributes="Bold"
+                   TextColor="#0E2356"/>
+
+            <Entry x:Name="txtNome"
+                   TextColor="Black"
+                   Placeholder="Ex: Teclado Mecânico RGB"
+                   MaxLength="50"
+                   ClearButtonVisibility="WhileEditing"/>
+
+            <Label x:Name="lblValidationNome"
+                   TextColor="#D32F2F"
+                   FontSize="12"
+                   IsVisible="False"/>
+
+
+            <!--codigo-->
+
+            <Label Text="Código do produto"
+                   FontAttributes="Bold"
+                   TextColor="#0E2356"/>
+
+            <Entry x:Name="txtCodigo"
+                   TextColor="Black"
+                   Placeholder="Ex: TEC-001"
+                   MaxLength="15"
+                   ClearButtonVisibility="WhileEditing"/>
+
+            <Label x:Name="lblValidationCodigo"
+                   TextColor="#D32F2F"
+                   FontSize="12"
+                   IsVisible="False"/>
+
+
+            <!--fornecedor -->
+
+            <Label Text="Fornecedor"
+                   FontAttributes="Bold"
+                   TextColor="#0E2356"/>
+
+            <Entry x:Name="txtFornecedor"
+                   TextColor="Black"
+                   Placeholder="Ex: Tech Distribuidora"
+                   MaxLength="50"
+                   ClearButtonVisibility="WhileEditing"/>
+
+            <Label x:Name="lblValidationFornecedor"
+                   TextColor="#D32F2F"
+                   FontSize="12"
+                   IsVisible="False"/>
+
+
+            <!--qtd-->
+
+            <Label Text="Quantidade em estoque"
+                   FontAttributes="Bold"
+                   TextColor="#0E2356"/>
+
+            <Entry x:Name="txtQuantidade"
+                   TextColor="Black"
+                   Placeholder="Ex: 50"
+                   Keyboard="Numeric"
+                   MaxLength="5"
+                   ClearButtonVisibility="WhileEditing"/>
+
+            <Label x:Name="lblValidationQuantidade"
+                   TextColor="#D32F2F"
+                   FontSize="12"
+                   IsVisible="False"/>
+
+
+            <!--compra-->
+
+            <Label Text="Preço de compra"
+                   FontAttributes="Bold"
+                   TextColor="#0E2356"/>
+
+            <Entry x:Name="txtPrecoCompra"
+                   TextColor="Black"
+                   Placeholder="Ex: 150,00"
+                   Keyboard="Numeric"
+                   MaxLength="10"
+                   ClearButtonVisibility="WhileEditing"/>
+
+            <Label x:Name="lblValidationPrecoCompra"
+                   TextColor="#D32F2F"
+                   FontSize="12"
+                   IsVisible="False"/>
+
+
+            <!--preço-->
+
+            <Label Text="Preço de venda"
+                   FontAttributes="Bold"
+                   TextColor="#0E2356"/>
+
+            <Entry x:Name="txtPrecoVenda"
+                   TextColor="Black"
+                   Placeholder="Ex: 220,00"
+                   Keyboard="Numeric"
+                   MaxLength="10"
+                   ClearButtonVisibility="WhileEditing"/>
+
+            <Label x:Name="lblValidationPrecoVenda"
+                   TextColor="#D32F2F"
+                   FontSize="12"
+                   IsVisible="False"/>
+
+
+            <!--estoque minimo-->
+
+            <Label Text="Estoque mínimo"
+                   FontAttributes="Bold"
+                   TextColor="#0E2356"/>
+
+            <Entry x:Name="txtEstoqueMinimo"
+                   TextColor="Black"
+                   Placeholder="Ex: 5"
+                   Keyboard="Numeric"
+                   MaxLength="5"
+                   ClearButtonVisibility="WhileEditing"/>
+
+            <Label x:Name="lblValidationEstoqueMinimo"
+                   TextColor="#D32F2F"
+                   FontSize="12"
+                   IsVisible="False"/>
+
+
+            <!--btnSalvar-->
+
+            <Button Text="SALVAR PRODUTO"
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    TextColor="White"
+                    BackgroundColor="DarkBlue"
+                    CornerRadius="12"
+                    HeightRequest="55"
+                    Margin="0,15,0,25"
+                    Clicked="btnSalvar_Clicked"/>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+</ContentPage>
