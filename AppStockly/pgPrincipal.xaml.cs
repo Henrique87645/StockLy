@@ -1,3 +1,5 @@
+using AppStockly.Models;
+using AppStockly.Views;
 namespace AppStockly;
 
 public partial class pgPrincipal : ContentPage
@@ -48,9 +50,14 @@ public partial class pgPrincipal : ContentPage
     {
         await ((Button)sender).ScaleTo(1.0, 100);
     }
+    
     private async void btnCadastrar_Clicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new pgCadProduto());
+        Application.Current.MainPage = new NavigationPage(new pgCadProdutoV2());
     }
 
+    private void btnVisualizar_Clicked(object sender, EventArgs e)
+    {
+        Application.Current.MainPage = new NavigationPage(new pgVisuProduto());
+    }
 }

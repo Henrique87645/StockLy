@@ -10,8 +10,7 @@ namespace AppStockly
         private Label LabelInformation { get; set; }
 
         //Criar o construtor para realização do vinculo
-        public ValidationComponent(
-            Entry txtCampo, Label lblValidation)
+        public ValidationComponent(Entry txtCampo, Label lblValidation)
         {
             //Ou seja, sempre que eu vou instanciar
             //esta classe sou obrigado a informar
