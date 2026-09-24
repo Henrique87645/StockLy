@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppStockly.Views.pgVisuProduto"
+             Title="pgVisuProduto">
+    <VerticalStackLayout Padding="25,30" Spacing="15">
+
+        <Label Text="Produto Salvo" FontSize="25" FontAttributes="Bold" TextColor="DarkBlue" Margin="0,0,0,15" />
+
+        <Label Text="Nome:" FontAttributes="Bold" TextColor="#0E2356"/>
+        <!-- O Binding pega a propriedade diretamente da ViewModel -->
+        <Label Text="{Binding ProdutoVisualizado.Nome}" TextColor="Black" FontSize="16" />
+
+        <Label Text="Código:" FontAttributes="Bold" TextColor="#0E2356"/>
+        <Label Text="{Binding ProdutoVisualizado.Codigo}" TextColor="Black" FontSize="16" />
+
+        <Label Text="Fornecedor:" FontAttributes="Bold" TextColor="#0E2356"/>
+        <Label Text="{Binding ProdutoVisualizado.Fornecedor}" TextColor="Black" FontSize="16" />
+
+        <Label Text="Quantidade em Estoque:" FontAttributes="Bold" TextColor="#0E2356"/>
+        <Label Text="{Binding ProdutoVisualizado.Quantidade}" TextColor="Black" FontSize="16" />
+
+        <Label Text="Preço de Compra:" FontAttributes="Bold" TextColor="#0E2356"/>
+        <Label Text="{Binding ProdutoVisualizado.PrecoCompra, StringFormat='R$ {0:F2}'}" TextColor="Black" FontSize="16" />
+
+        <Label Text="Preço de Venda:" FontAttributes="Bold" TextColor="#0E2356"/>
+        <Label Text="{Binding ProdutoVisualizado.PrecoVenda, StringFormat='R$ {0:F2}'}" TextColor="Black" FontSize="16" />
+
+        <Label Text="Estoque Mínimo:" FontAttributes="Bold" TextColor="#0E2356"/>
+        <Label Text="{Binding ProdutoVisualizado.EstoqueMinimo}" TextColor="Black" FontSize="16" />
+
+        <Button Text="VOLTAR AO INÍCIO" FontAttributes="Bold" FontSize="16" TextColor="White" 
+                    BackgroundColor="DarkBlue" CornerRadius="12" HeightRequest="55" Margin="0,20,0,0" 
+                    Clicked="btnVoltar_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>
