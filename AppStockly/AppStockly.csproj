@@ -77,10 +77,10 @@
 	  <MauiXaml Update="Views\pgCadProdutoV2.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\pgLoginV2.xaml">
+	  <MauiXaml Update="Views\pgListaProdutos.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\pgVisuProduto.xaml">
+	  <MauiXaml Update="Views\pgLoginV2.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

@@ -4,14 +4,17 @@ using System.Text;
 
 namespace AppStockly.Models
 {
-    public class CadProduto
+    public class Produto
     {
-        public string Produto { get; set; }
+        //Atributos do cadastro
+        public string NomeProduto { get; set; } //esse
+        public string Modelo { get; set; } //esse
         public string Codigo { get; set; }
+        public string ImagemProduto { get; set; }
         public string Fornecedor { get; set; }
-        public int Quantidade { get; set; }
+        public int Quantidade { get; set; } //esse
         public decimal PrecoCompra { get; set; }
-        public decimal PrecoVenda { get; set; }
+        public decimal PrecoVenda { get; set; } //esse
         public int EstoqueMinimo { get; set; }
     }
 }

@@ -39,6 +39,40 @@ namespace AppStockly.ViewModels
             }
         }
 
+        //Nome do Produto
+        private string _modelo; //BACKEND
+        public string Modelo  //FRONTEND
+        {
+            get { return _modelo; }
+            set
+            {
+                _modelo = value;
+                OnPropertyChanged();  //LEITURA do Front -> Produto e vou jogar para o meu backend -> _produto
+            }
+        }
+
+        private string _mensagemValidacaoModelo;
+        public string MensagemValidacaoModelo
+        {
+            get { return _mensagemValidacaoModelo; }
+            set
+            {
+                _mensagemValidacaoModelo = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private bool _exibirMensagemValidacaoModelo;
+        public bool ExibirMensagemValidacaoModelo
+        {
+            get { return _exibirMensagemValidacaoModelo; }
+            set
+            {
+                _exibirMensagemValidacaoModelo = value;
+                OnPropertyChanged();
+            }
+        }
+
 
         //Codigo do produto
         private string _Codigo;
@@ -261,14 +295,19 @@ namespace AppStockly.ViewModels
             {
                 return new Command(() =>
                 {
-                    ValidarProduto();
-                    ValidarCodigo();
-                    ValidarFornecedor();
-                    ValidarQuantidade();
-                    ValidarPrecoCompra();
-                    ValidarPrecoVenda();
-                    ValidarEstoqueMinimo();
-                   
+                    Produto novoProduto = new Produto
+                    {
+                        NomeProduto = Produto,
+                        Modelo = Modelo,
+                        Codigo = Codigo,
+                        Fornecedor = Fornecedor,
+                        Quantidade = int.Parse(Quantidade),
+                        PrecoCompra = decimal.Parse(PrecoCompra),
+                        PrecoVenda = decimal.Parse(PrecoVenda),
+                        EstoqueMinimo = int.Parse(EstoqueMinimo)
+                    };
+
+                    ProdutoSingleton.Instancia.Produtos.Add(novoProduto);
                 });
             }
         }
@@ -289,7 +328,17 @@ namespace AppStockly.ViewModels
                                     //Validações
         //------------------------------------------------------------------
 
-
+        private void Validacoes()
+        {
+            ValidarProduto();
+            ValidarModelo();
+            ValidarCodigo();
+            ValidarFornecedor();
+            ValidarQuantidade();
+            ValidarPrecoCompra();
+            ValidarPrecoVenda();
+            ValidarEstoqueMinimo();
+        }
         private void ValidarProduto()
         {
             if (string.IsNullOrWhiteSpace(Produto))
@@ -302,6 +351,20 @@ namespace AppStockly.ViewModels
             {
                 MensagemValidacaoNomeProduto = "O nome possui caracteres inválidos.";
                 ExibirValidacaoNomeProduto = true;
+            }
+        }
+
+        private void ValidarModelo()
+        {
+            if (string.IsNullOrWhiteSpace(Modelo))
+            {
+                MensagemValidacaoNomeProduto = "O nome do modelo é obrigatório.";
+                ExibirValidacaoNomeProduto = true;
+            }
+            else if (Modelo.Length < 3)
+            {
+                MensagemValidacaoCodigo = "O modelo do produto deve ter pelo menos 3 caracteres.";
+                ExibirMensagemValidacaoCodigo = true;
             }
         }
 

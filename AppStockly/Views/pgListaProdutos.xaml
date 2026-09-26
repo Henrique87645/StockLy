@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppStockly.Views.pgListaProdutos"
+             Title="Produtos">
+
+    <Grid>
+        <!-- Fundo principal -->
+        <ScrollView>
+            <VerticalStackLayout>
+
+                <!-- Fundo superior -->
+                <Image Source="fundo.png"
+                       HeightRequest="180"
+                       HorizontalOptions="Fill"
+                       VerticalOptions="Start"
+                       Rotation="180"
+                       Aspect="AspectFill"/>
+
+                <!-- Conteúdo -->
+                <VerticalStackLayout Padding="20,0,20,20">
+
+                    <!-- Logo -->
+                    <Image Source="iconstockly.png"
+                           HeightRequest="100"
+                           HorizontalOptions="Center"
+                           Margin="0,-10,0,0"/>
+
+                    <!-- Título -->
+                    <Label Text="Produtos cadastrados"
+                           FontSize="30"
+                           TextColor="Black"
+                           HorizontalOptions="Center"
+                           Margin="0,0,0,15"/>
+
+
+                    <!-- Lista de produtos -->
+                    <CollectionView ItemsSource="{Binding Produtos}">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame BackgroundColor="White"
+                                       BorderColor="Black"
+                                       CornerRadius="12"
+                                       Padding="15"
+                                       Margin="0,5">
+
+                                    <VerticalStackLayout Spacing="5">
+
+                                        <!-- Nome -->
+                                        <Label Text="{Binding NomeProduto}"
+                                               FontSize="20"
+                                               FontAttributes="Bold"
+                                               TextColor="#0E2356"/>
+
+
+                                        <!-- Modelo -->
+                                        <Label Text="{Binding Modelo, StringFormat='Modelo: {0}'}"
+                                               TextColor="Black"/>
+
+
+                                        <!-- Fornecedor -->
+                                        <Label Text="{Binding Fornecedor, StringFormat='Fornecedor: {0}'}"
+                                               TextColor="Black"/>
+
+
+                                        <!-- Quantidade -->
+                                        <Label Text="{Binding Quantidade, StringFormat='Quantidade: {0}'}"
+                                               TextColor="Black"/>
+
+                                        <!-- Preço de venda -->
+                                        <Label Text="{Binding PrecoVenda, StringFormat='Preço de venda: R$ {0:F2}'}"
+                                               TextColor="Black"/>
+
+
+                                        <!-- Estoque mínimo -->
+                                        <Label Text="{Binding EstoqueMinimo, StringFormat='Estoque mínimo: {0}'}"
+                                               TextColor="Black"/>
+
+                                    </VerticalStackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+                    <!-- Botão voltar -->
+                    <Button Text="Voltar"
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            TextColor="White"
+                            BackgroundColor="DarkBlue"
+                            CornerRadius="12"
+                            HeightRequest="55"
+                            Margin="0,15,0,25"
+                            Command="{Binding VoltarCommand}"/>
+
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

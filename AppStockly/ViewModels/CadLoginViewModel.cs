@@ -64,6 +64,7 @@ namespace AppStockly.ViewModels
             {
                 return new Command(() =>
                 {
+                    ValidarUserName();
                     Entrar();
                 });
             }
@@ -79,7 +80,7 @@ namespace AppStockly.ViewModels
 
         private void Entrar()
         {
-            Application.Current.MainPage = new NavigationPage(new pgPrincipal());
+            Application.Current.MainPage = new NavigationPage(new MainPage());
         }
 
         private void ValidarUserName()

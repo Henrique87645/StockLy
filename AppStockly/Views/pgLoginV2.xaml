@@ -20,8 +20,7 @@
 
 
             <!-- Conteúdo da tela -->
-            <StackLayout HorizontalOptions="Center"
-                     Padding="20,0,20,0">
+            <StackLayout HorizontalOptions="Center" Padding="20,0,20,0">
 
                 <Image Source="iconstockly.png"
                    HeightRequest="100"
@@ -103,9 +102,7 @@
                             Command="{Binding btnCadastrar}"/>
 
                     </StackLayout>
-
                 </Frame>
-
             </StackLayout>
 
             <Image x:Name="imgFundo"
@@ -117,6 +114,5 @@
                Margin="0,-10,0,0"/>
 
         </StackLayout>
-
     </ScrollView>
 </ContentPage>
